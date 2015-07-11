@@ -1,8 +1,8 @@
 ##Pagination plugin for Obraz.  
-This plugin creates 'page.paginator' variable for using in 'index.html' template ( every paginated page is a copy of 'index.html' file).  
+This plugin creates ***page.paginator*** variable for using in ***index.html*** template ( every paginated page is a copy of ***index.html*** file).  
 Use [Jekyll docs](http://jekyllrb.com/docs/pagination/) for understanding how to use plugin.
 
-Small tip: in Jekyll's templates we have global variable * **'paginator'** * in this plugin we have * **'page.paginator'** * variable.  
+Small tip: use ***page.paginator*** instead of ***paginator*** from Jekyll.
 Edited copy/paste from Jekyll docs:  
 ```htmldjango
 <!-- Pagination links -->
@@ -23,8 +23,8 @@ Edited copy/paste from Jekyll docs:
 
 Configuration in `_config.yml`:  
 ```yml
-    paginate: posts_per_page
-    paginate_path: path_for_paginated_pages
+paginate: 5 # Posts per page
+paginate_path: /blog/page{num}/ # Path for output pages
 ```
 
 Requirements:  
