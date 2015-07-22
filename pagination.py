@@ -93,6 +93,7 @@ def process_paginator_pages(site):
         if page['path'] == "index.html":
             base_page = page
             base_page['paginator'] = paginator_default
+            pages.remove(page)
             break
 
     pagination_pages = [base_page]
@@ -131,4 +132,4 @@ def process_paginator_pages(site):
     if posts_count < paginate:
         pagination_pages[0]['paginator']['posts'] = copy(current_page_posts)
 
-    site['pages'] = pagination_pages
+    site['pages'].extend(pagination_pages)
